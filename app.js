@@ -848,9 +848,9 @@
   /* ------------------------------------------------------------------
      Theme + effects
   ------------------------------------------------------------------ */
-  const THEMES = ["green", "amber", "white"];
+  const THEMES = ["cyan", "green", "amber", "white"];
   function cycleTheme() {
-    const cur = document.body.dataset.theme || "green";
+    const cur = document.body.dataset.theme || "cyan";
     const next = THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length];
     document.body.dataset.theme = next;
     setStatus(`THEME: ${next.toUpperCase()}`, "ok");

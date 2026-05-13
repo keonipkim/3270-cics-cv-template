@@ -4,7 +4,7 @@ A static HTML/CSS/JS CV / portfolio template styled as an **IBM 3270 / CICS-styl
 
 ## What you get
 
-- A CRT bezel with phosphor-green (default), amber, and white themes.
+- A CRT bezel with cyan/magenta 3270 multi-color (default), phosphor green, amber, and white themes.
 - Scanlines, vignette, and an ambient flicker that respect `prefers-reduced-motion`.
 - A 24-row layout: banner, screen body, command line (`===>`), status/error line, PF-key footer.
 - BMS-style field attributes via CSS classes: protected, unprotected, bright, reverse-video, numeric, MDT-changed, error.
@@ -79,9 +79,9 @@ Then either link it from another screen's `options` array (so it shows up in a m
 
 ### Theme
 
-- Click **THEME** in the PF footer (or type `THEME` on the command line) to cycle **green → amber → white**.
-- Or load with `?theme=amber` / `?theme=white`.
-- Variables live at the top of `styles.css` under `:root`, `[data-theme="amber"]`, `[data-theme="white"]`. Adjust phosphor color, glow, and background per theme there.
+- Click **THEME** in the PF footer (or type `THEME` on the command line) to cycle **cyan → green → amber → white**.
+- Or load with `?theme=green` / `?theme=amber` / `?theme=white`.
+- Variables live at the top of `styles.css` under `:root` (cyan default), `[data-theme="green"]`, `[data-theme="amber"]`, `[data-theme="white"]`. Adjust phosphor color, accent, glow, and background per theme there.
 
 ### Effects
 
@@ -94,7 +94,7 @@ Then either link it from another screen's `options` array (so it shows up in a m
 - Semantic landmarks (`<main>`, `<header>`, `<footer>`, `<nav>`).
 - Focus-visible outlines on menu rows and PF buttons.
 - All interactive elements are reachable by Tab; no keyboard trap (typing inside form fields behaves normally; F-keys still work everywhere).
-- Color choices target WCAG AA in green and amber themes; the white theme exists as a high-contrast fallback.
+- Color choices target WCAG AA in cyan, green, and amber themes; the white theme exists as a high-contrast fallback.
 - Animation is disabled under `prefers-reduced-motion`.
 
 ## File map
@@ -110,7 +110,7 @@ Then either link it from another screen's `options` array (so it shows up in a m
 ## Design / content notes
 
 - The look is "tasteful 3270," not gimmick. Scanlines are subtle, the flicker is rare, and the body sticks to a strict mono grid with a ~24-row feel. Glow is kept low so text remains readable.
-- The default palette is x3270-style phosphor green; amber matches the classic IBM 3279 amber tube; white is for users who want maximum legibility.
+- The default palette is the classic IBM 3279 multi-color look — cyan labels, white values, magenta field markers on pure black. Green matches x3270-style phosphor, amber the older 3279 amber tube, and white is a high-legibility fallback.
 - Content is tailored from Keoni Kim's public LinkedIn profile: MISSO-09 supervision, data engineering / analytics architecture, MCTFS and TFDW work, PEBD validation, Cognos / Databricks / PySpark, IPAC leadership, audit analytics, personnel administration, and listed data-analytics certifications. Review `app.js` before publishing publicly.
 - The inline SVG logo is a small terminal mark with a wordmark and is rendered on the MAIN screen. Edit the `<template id="svg-logo">` block in `index.html` to change it.
 
